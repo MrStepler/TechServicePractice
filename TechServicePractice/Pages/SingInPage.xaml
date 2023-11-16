@@ -1,0 +1,26 @@
+﻿<Page x:Class="TechServicePractice.SingInPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:TechServicePractice"
+      mc:Ignorable="d" 
+      d:DesignHeight="600" d:DesignWidth="1000"
+      Title="SingInPage">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="30*"/>
+            <ColumnDefinition Width="30*"/>
+            <ColumnDefinition Width="30*"/>
+        </Grid.ColumnDefinitions>
+        <Label Content="ВХОД" Foreground="White" Grid.Column="1" HorizontalAlignment="Center" Margin="0,0,0,190" FontSize="24" VerticalAlignment="Center"/>
+        <Label Content="Номер телефона" Foreground="White" Grid.Column="1" HorizontalAlignment="Center" Margin="0,0,125,90" FontSize="14" VerticalAlignment="Center"/>
+        <TextBox Name="PhoneNumberTextBox" Width="250" Height="30" Grid.Column="1" HorizontalAlignment="Center" Margin="0,0,0,40" />
+        <Label Content="Пароль" Foreground="White" Grid.Column="1" HorizontalAlignment="Center" Margin="0,30,180,0" FontSize="14" VerticalAlignment="Center"/>
+        <PasswordBox Name="PasswordTextBox" Width="250" Height="30" Grid.Column="1" HorizontalAlignment="Center" Margin="0,80,0,0"/>
+        <Button  Grid.Column="1" Margin="0,200,0,0" HorizontalAlignment="Center" Content="Вход" Click="SignInHandler"/>
+        <Button  Grid.Column="1" Margin="0,290,0,0" HorizontalAlignment="Center" Content="Назад" Click="BackButtonHandler"/>
+
+    </Grid>
+</Page>

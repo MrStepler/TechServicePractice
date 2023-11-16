@@ -1,0 +1,58 @@
+﻿<Page x:Class="TechServicePractice.Pages.RequestPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:TechServicePractice.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="600" d:DesignWidth="1000"
+      Title="RequestPage">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="30"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="30"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="70*"/>
+
+            <RowDefinition Height="20*"/>
+            <RowDefinition Height="30"/>
+        </Grid.RowDefinitions>
+        <Label Name="HeaderLabel" Content="Заявка" Grid.Row="1" Grid.Column="1" Foreground="White" FontSize="30" HorizontalAlignment="Center"/>
+        <ScrollViewer Grid.Row="2" Grid.Column="1" Loaded="RequestDataLoaded">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="70"/>
+                    <RowDefinition Height="70"/>
+                    <RowDefinition Height="70"/>
+                    <RowDefinition Height="70"/>
+                    <RowDefinition Height="70"/>
+                    <RowDefinition Height="200"/>
+                </Grid.RowDefinitions>
+                <Label Content="Приоритет выполнения" Grid.Row="0" Grid.Column="1" Foreground="White" FontSize="14" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,50,30"/>
+                <ComboBox Name="PriorityCb" Grid.Row="0" Grid.Column="1" Height="30" Width="100" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,40,50,0"/>
+                
+                <Label Content="Тип проблемы:" Grid.Row="0" Grid.Column="1" Foreground="White" FontSize="14" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="0,0,0,30"/>
+                <TextBox Name="ProblemTypeTextBox" Grid.Row="0" Grid.Column="1" Height="30" Width="500" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="0,40,0,0"/>
+                <Label Content="Серийный номер устройства" Grid.Row="1" Grid.Column="1" Foreground="White" FontSize="14" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="0,0,0,30"/>
+                <TextBox Name="SearialNumberTb" Grid.Row="1" Grid.Column="1" Height="30" Width="500" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="0,40,0,0"/>
+                <Label Content="№ обращения" Grid.Row="2" Grid.Column="1" Foreground="White" FontSize="14" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="0,0,0,30"/>
+                <ComboBox SelectedValuePath="{Binding Id}" Name="AppealCb" Grid.Row="2" Grid.Column="1" Height="30" Width="500" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="0,40,0,0"/>
+                <Label Content="Исполнитель" Grid.Row="3" Grid.Column="1" Foreground="White" FontSize="14" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="0,0,0,30"/>
+                <ComboBox SelectedValuePath="{Binding Fio}" Name="ExecutorCb" Grid.Row="3" Grid.Column="1" Height="30" Width="500" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="0,40,0,0"/>
+                <Label Content="Дата завершения" Grid.Row="4" Grid.Column="1" Foreground="White" FontSize="14" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="0,0,0,30"/>
+                <DatePicker Name="CompletingDateDp" Grid.Row="4" Grid.Column="1" Height="30" Width="500" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="0,40,0,0"/>
+                
+                <Label Content="Комментарий" Grid.Row="5" Grid.Column="1" Foreground="White" FontSize="14" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,0,0,30"/>
+                <TextBox Name="CommentaryTb" Grid.Row="5" Grid.Column="1" Height="150" Width="700" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,40,0,0"/>
+            </Grid>
+        </ScrollViewer>
+        
+        <Button Name="RequestButton" Grid.Row="3" Grid.Column="1" Content="Создать" HorizontalAlignment="Center" Margin="50,0,0,0" Click="RequestButtonHandler"/>
+        <Button Grid.Row="1" Grid.Column="1" Content="Назад" HorizontalAlignment="Right" Margin="0,0,50,0" Click="BackButtonHandler"/>
+    </Grid>
+</Page>

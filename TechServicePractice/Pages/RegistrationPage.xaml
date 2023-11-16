@@ -1,0 +1,34 @@
+﻿<Page x:Class="TechServicePractice.RegistrationPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:TechServicePractice"
+      mc:Ignorable="d" 
+      d:DesignHeight="600" d:DesignWidth="1000"
+      Title="RegistrationPage">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50*"/>
+            <RowDefinition Height="400"/>
+            <RowDefinition Height="100*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="300"/>
+            <ColumnDefinition Width="300*"/>
+            <ColumnDefinition Width="300"/>
+        </Grid.ColumnDefinitions>
+        <Label Content="Регистрация" Foreground="White" FontSize="24" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,0,0" Grid.RowSpan="1" Grid.Column="1"/>
+        <Label Grid.Column="1" Content="ФИО" Foreground="White" FontSize="14" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="30,0,0,320" Grid.Row="1"/>
+        <TextBox Name="FioTextBox" Width="250" Height="30" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,0,260" Grid.Row="1"/>
+        <Label Grid.Column="1" Content="Дата рождения" Foreground="White" FontSize="14" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="30,0,0,200" Grid.Row="1"/>
+        <DatePicker Name="BirtDateBox" Text="Выберете дату" Width="250" Height="30" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,0,140" Grid.Row="1" SelectedDateFormat="Short"/>
+        <Label Grid.Column="1" Content="Номер телефона" Foreground="White" FontSize="14" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="30,0,0,80" Grid.Row="1"/>
+        <TextBox Name="PhoneNumberTextBox" Width="250" Height="30" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,0,20" Grid.Row="1"/>
+        <Label Grid.Column="1" Content="Пароль" Foreground="White" FontSize="14" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="30,40,0,0" Grid.Row="1"/>
+        <PasswordBox Name="PasswordTextBox" Width="250" Height="30" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,100,0,0" Grid.Row="1"/>
+        <Button Grid.Column="1" Content="Регистрация" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,0,0,0" Click="RegistrationButtonHadler" Grid.Row="2"/>
+        <Button Grid.Column="1" Content="Назад" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,40,0,0" Click="BackButtonHandler" Grid.Row="2"/>
+    </Grid>
+</Page>
